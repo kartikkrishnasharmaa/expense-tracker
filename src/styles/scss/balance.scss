@@ -1,0 +1,145 @@
+@import "./mixins";
+@import "./variables";
+
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.balance-container .balance-heading {
+  color: $primary-color;
+  color: $primary-color;
+  text-shadow: 1px 1px 2px rgb(34, 93, 141);
+  font-weight: 600;
+  margin: 1rem;
+  width: 88%;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.income-expense-container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.income-expense-container h2 {
+  width: 50%;
+  font-size: 1rem;
+  border-radius: 0 50px 50px 50px;
+  box-shadow: 2px 2px 2px $primary-color;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.income {
+  background: $primary-color;
+  color: $asset-color;
+  box-shadow: 2px 2px 2px black !important;
+}
+
+.dollar {
+  color: #004e61;
+}
+
+.transaction-form {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.transaction-form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $primary-color;
+  margin-top: 1.2rem;
+}
+
+.transaction-form input {
+  width: 70%;
+  display: flex;
+  margin: 0.2rem auto;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-section .submit-btn {
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 13rem;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.add-income-btn {
+  background: $primary-color;
+  color: white;
+  border-radius: 0 20px 0px 30px;
+  outline: none;
+  font-weight: 500;
+}
+
+.add-expense-btn {
+  background: white;
+  color: $primary-color;
+  font-weight: 800;
+  border-radius: 0 20px 0px 30px;
+  outline: none;
+}
+
+.add-income-btn:hover {
+  background: white;
+  color: $primary-color;
+  font-weight: 800;
+}
+
+.add-expense-btn:hover {
+  background: $primary-color;
+  color: white;
+  font-weight: 500;
+}
+
+@media (max-width: $mobile) {
+  .buttons-section .submit-btn {
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+  }
+
+  .transaction-form input {
+    min-width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons-section .submit-btn {
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 8rem;
+  }
+
+  .transaction-form input {
+    min-width: 80%;
+  }
+}
